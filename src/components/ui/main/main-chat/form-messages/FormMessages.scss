@@ -1,0 +1,13 @@
+.form {
+  width: 100%;
+}
+.form__inner {
+  display: flex;
+  padding: 5px 0;
+  gap: 10px;
+  input,
+  button {
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+}

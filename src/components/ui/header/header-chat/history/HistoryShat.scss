@@ -1,0 +1,55 @@
+@import "./../../../../../scss//shared/variables.scss";
+
+.history {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  max-height: calc(100vh - 124px);
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  background: #bfe2ff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.2s, transform 0.2s, pointer-events 0.2s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+.history__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  column-gap: 10px;
+}
+
+.history__name {
+  font-weight: 700;
+}
+
+.history__message {
+  word-break: break-all;
+}
+
+@media (max-width: $mobile) {
+  .history__item {
+    border-bottom: 1px solid gray;
+    margin-bottom: 5px;
+  }
+  .history__time {
+    margin-right: auto;
+  }
+  .history__message {
+    display: flex;
+    width: 100%;
+  }
+}

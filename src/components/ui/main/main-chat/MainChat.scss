@@ -1,0 +1,5 @@
+.chat__inner {
+  height: calc(100vh - 57px);
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
